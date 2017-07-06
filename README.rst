@@ -20,4 +20,4 @@ Quick start
 
     url(r'^cryptocoins/', include('cryptocoins.urls')),
 
-3. Run `python manage.py migrate` to create the polls models.
+3. Run `python manage.py migrate` to create the cryptocoins models.
