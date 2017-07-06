@@ -1,3 +1,5 @@
 dist/
 *.egg-info
 build/
+.pypirc
+A_Commands.txt
