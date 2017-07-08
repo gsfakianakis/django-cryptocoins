@@ -4,17 +4,17 @@ from django.contrib import admin
 from .models import *
 
 
-def update_prices(modeladmin, request, queryset):
+def update_price(modeladmin, request, queryset):
     for obj in queryset:
-        obj.update_prices()
-update_prices.short_description = "Update Price"
+        obj.update_price()
+update_price.short_description = "Update Price"
 
 
 class CoinAdmin(admin.ModelAdmin):
     #list_display = ('id', 'name', 'price_btc')
     list_display = [field.name for field in Coin._meta.fields]
     ordering = ('id',)
-    actions = [update_prices]
+    actions = [update_price]
 
 admin.site.register(Coin,CoinAdmin)
 
@@ -32,15 +32,15 @@ admin.site.register(CoinPortfolio,CoinPortfolioAdmin)
 
 ##
 
-def update_prices_entry(modeladmin, request, queryset):
+def update_balance_entry(modeladmin, request, queryset):
     for obj in queryset:
-        obj.update_prices()
-update_prices_entry.short_description = "Update Prices Portfolio Entry"
+        obj.update_balance()
+update_balance_entry.short_description = "Update Prices Portfolio Entry"
 
 class CoinPortfolioEntryAdmin(admin.ModelAdmin):
     list_display = [field.name for field in CoinPortfolioEntry._meta.fields]
     ordering = ('id',)
-    actions = [update_prices_entry]
+    actions = [update_balance_entry]
 
 
 admin.site.register(CoinPortfolioEntry,CoinPortfolioEntryAdmin)

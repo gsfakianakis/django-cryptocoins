@@ -21,3 +21,8 @@ Quick start
     url(r'^cryptocoins/', include('cryptocoins.urls')),
 
 3. Run `python manage.py migrate` to create the cryptocoins models.
+
+4. Run `python manage.py J1_Update_Coins --import-all` to import all cryptocoins from coinmarketcap.com.
+	As an alternative you can run `python manage.py J1_Update_Coins --import-only BTC,ETH,STORJ ` to import only these cryptocoins
+	
+5. 	Run `python manage.py J1_Update_Coins` or visit 'http://127.0.0.1:8000/cryptocoins/coins/update_all/' to update the prices of imported cyptocoins
