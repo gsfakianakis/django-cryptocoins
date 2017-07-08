@@ -28,13 +28,13 @@ Quick start
 
     python manage.py J1_Update_Coins --import-all
 
-  to import all cryptocoins from coinmarketcap.com.
+to import all cryptocoins from coinmarketcap.com.
 
-  As an alternative you can run::
+As an alternative you can run::
 
     python manage.py J1_Update_Coins --import-only BTC,ETH,STORJ
 
-  to import only these cryptocoins
+to import only these cryptocoins
 
 5. 	Run::
 
@@ -45,8 +45,3 @@ or visit::
     http://127.0.0.1:8000/cryptocoins/coins/update_all/
 
 to update the prices of imported cyptocoins
-
-
-```
-Give examples
-```
