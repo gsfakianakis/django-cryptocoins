@@ -45,3 +45,8 @@ or visit::
     http://127.0.0.1:8000/cryptocoins/coins/update_all/
 
 to update the prices of imported cyptocoins
+
+
+```
+Give examples
+```
