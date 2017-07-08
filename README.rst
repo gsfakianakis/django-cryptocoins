@@ -36,7 +36,7 @@ As an alternative you can run::
 
 to import only these cryptocoins
 
-5. 	Run::
+5. Run::
 
     python manage.py J1_Update_Coins
 
