@@ -10,6 +10,19 @@ from mycoinfolio.settings import *
 from cryptocoins.functions_nomodels import *
 from cryptocoins.models import *
 
+# xml_time_zone = 'Europe/Berlin'
+
+def xstr(s):
+    if s is None:
+        return ''
+    return str(s)
+
+def adv_float(x):
+    if x is None:
+        return None
+    else:
+        return float(x)
+
 
 class Command(BaseCommand):
     help = 'Updates coins and prices'
@@ -37,6 +50,8 @@ class Command(BaseCommand):
 
         if options['import_list']:
             Import_List = options['import_list'].lower().split(',');
+        else:
+            Import_List = []
 
         New_Added = 0
         Updated = 0
@@ -63,6 +78,9 @@ class Command(BaseCommand):
                 cn.update_price(data)
                 print("New Added: " + data['name'])
 
+
+            # if ccid == 'storj' or ccid == 'storjcoin-x':
+            #     print(data['id'])
 
         self.stdout.write('        ')
         self.stdout.write('Total..' + str(len(data_all)))
