@@ -3,3 +3,4 @@ dist/
 build/
 .pypirc
 A_Commands.txt
+dev_env/
